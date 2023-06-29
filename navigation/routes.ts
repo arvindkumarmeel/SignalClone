@@ -1,0 +1,9 @@
+export const AUTHSTACK = 'AUTHSTACK';
+export const NAVIGATION_AUTH_LOADING_STACK: string =
+  'NAVIGATION_AUTH_LOADING_STACK';
+export const MAIN_AFTER_LOGIN_SCREEN: string = 'MAIN_AFTER_LOGIN_SCREEN';
+export const LOGIN_SCREEN: string = 'LOGIN_SCREEN';
+export const SIGNUP_SCREEN: string = 'SIGNUP_SCREEN';
+export const NAVIGATION_TAB_STACK: string = 'NAVIGATION_TAB_STACK';
+export const DRAWER_NAVIGATION: string = 'DRAWER_NAVIGATION';
+export const HOME_SCREEN = 'HOME_SCREEN';

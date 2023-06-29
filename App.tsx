@@ -1,24 +1,18 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import LoginScreen from './Screens/LoginScreen';
-import RegisterScreen from './Screens/RegisterScreen';
+import {View, Text, SafeAreaView} from 'react-native';
+import React, {useEffect} from 'react';
+import {Provider} from 'react-redux';
 
-const Stack = createNativeStackNavigator();
+import Navigator from './navigation/navigator';
+import store from './store/store';
+
 const App = () => {
   return (
-    <NavigationContainer>
-    <Stack.Navigator  screenOptions={{
-    headerShown: false
-  }}>
-      <Stack.Screen name="LoginScreen" component={LoginScreen} />
-      <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
-    </Stack.Navigator>
-  </NavigationContainer>
-  )
-}
+    <SafeAreaView style={{flex: 1}}>
+      <Provider store={store}>
+        <Navigator />
+      </Provider>
+    </SafeAreaView>
+  );
+};
 
-export default App
-
-const styles = StyleSheet.create({})
+export default App;
